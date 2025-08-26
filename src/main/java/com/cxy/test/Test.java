@@ -18,6 +18,7 @@ public class Test {
         });
         Thread thread = new Thread(task,"施贝贝");
         thread.start();
+        // 主线程阻塞，同步等待 task 执行完毕的结果
         log.debug("{}",task.get());
     }
 }
